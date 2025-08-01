@@ -5,7 +5,7 @@ import { TbBus } from "react-icons/tb";
 
 const TopSection = () => {
   return (
-    <div className="bg-gray-100 py-2 hidden md:block ">
+    <div className="bg-gray-100 py-2 hidden md:block">
       <div className="w-11/12 mx-auto md:flex sm:hidden justify-between items-center space-y-2 sm:space-y-0">
         
         {/* Left group */}
@@ -25,9 +25,9 @@ const TopSection = () => {
 
           <span className="text-gray-400 hidden sm:block">|</span>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <p className="text-sm sm:text-base">Follow Us</p>
-            <div className="flex gap-3 text-lg sm:text-xl">
+            <div className="flex gap-10 text-lg sm:text-xl">
               <FaFacebook />
               <FaTwitter />
               <FaThreads />

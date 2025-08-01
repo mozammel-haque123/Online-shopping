@@ -54,3 +54,7 @@ background-image: './assets/preview.png';
   transform: rotate(45deg) translate(-100%, 100%);
   background-color: rgba(255,255,255,0.1);
 }
+
+.gol{
+  background-color: rgb(98, 171, 0);
+}

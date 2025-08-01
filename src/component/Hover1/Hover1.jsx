@@ -4,7 +4,7 @@ const Hover1 = () => {
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
-    fetch("hover1data.json")
+    fetch("/hoverdata1.json")
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);

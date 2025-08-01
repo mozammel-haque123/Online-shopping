@@ -3,8 +3,6 @@ import "animate.css/animate.min.css";        // Animate.css ইমপোর্�
 import egypt from "../../assets/egypt.jpg";
 import fs from "../../assets/fs.jpg";
 import nfs from "../../assets/nfs.jpg";
-import logo from "../../assets/logo.png";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import banar from '../../assets/banner.png';
 import campaign from '../../assets/campaign.jpg';
 
@@ -44,7 +42,7 @@ const Slaider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[700px] shadow-lg">
+    <div className="relative w-full h-[700px]">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         {/* ✅ Background image */}
         <div
@@ -55,20 +53,7 @@ const Slaider = () => {
           }}
         >
           {/* ✅ Overlay content */}
-          <div className="w-full h-full slaidBg relative">
-            {/* ✅ Top Bar: Logo & Social Icons */}
-            <div className="absolute top-5 left-0 right-0 px-6 flex justify-between items-center z-20">
-              {/* Logo */}
-              <img src={logo} alt="logo" className="w-36 md:w-48" />
-
-              {/* Social Icons */}
-              <div className="flex gap-4 text-white text-xl md:text-2xl">
-                <FaTwitter className="hover:text-blue-400 transition" />
-                <FaYoutube className="hover:text-red-500 transition" />
-                <FaInstagram className="hover:text-pink-500 transition" />
-              </div>
-            </div>
-
+          <div className="w-full h-full slaidBg">
             {/* ✅ Slide Text Center */}
             <div className="h-full flex flex-col justify-center items-center text-white text-center px-4">
               <h1
@@ -90,7 +75,7 @@ const Slaider = () => {
               <div className="flex">
                 <button
                   className="
-                   py-8 px-10
+                   md:py-8 md:px-10
                    border-2
                    text-blue-700 font-bold
                     btn btn-outline btn-sm md:btn-md border-blue-600 hover:bg-black hover:text-white transition
@@ -101,7 +86,7 @@ const Slaider = () => {
                 </button>
                 <button
                   className="
-                   py-8 px-10
+                   md:py-8 md:px-10
                     btn btn-outline btn-sm md:btn-md bg-amber-500 border-none text-black hover:bg-green-400 hover:text-white transition
                     animate__animated animate__fadeInRight animate__slower animate__delay-4s
                   "
@@ -114,7 +99,7 @@ const Slaider = () => {
         </div>
 
         {/* ✅ Dots */}
-        <div className="absolute bottom-5 lg:left-140 md:left-70 transform -translate-x-1/2 flex gap-3 z-30">
+        <div className="absolute bottom-5 lg:left-140 md:left-70 transform -translate-x-1/2 flex gap-3 z-10">
           {slides.map((_, idx) => (
             <div
               key={idx}
@@ -127,19 +112,46 @@ const Slaider = () => {
         </div>
 
         <div className="flex flex-col gap-4 mt-14">
-          <div className="hover-sweep-container banar-container group relative overflow-hidden">
-            <img src={banar} alt="Banner" className="block w-full h-[350px]" />
-            <div className="sweep-overlay" />
-          </div>
+         <div className="relative overflow-hidden group banar-container hover-sweep-container">
+  <img
+    src={banar}
+    alt="Banner"
+    className="block w-full h-[350px] object-cover"
+  />
+  {/* sweeping white overlay */}
+  <span
+    className="
+      absolute inset-0
+      w-[390%] h-[200%]
+      bg-white opacity-40
+      transform rotate-45 translate-x-full -translate-y-full
+      group-hover:-translate-x-full group-hover:translate-y-full
+      transition-transform duration-2000 ease-in-out
+      pointer-events-none
+    "
+  />
+</div>
 
-          <div className="hover-sweep-container campaign-container group relative overflow-hidden">
-            <img
-              src={campaign}
-              alt="Banner"
-              className="block w-full h-[350px]"
-            />
-            <div className="sweep-overlay" />
-          </div>
+
+<div className="relative overflow-hidden group banar-container hover-sweep-container">
+  <img
+    src={campaign}
+    alt="Banner"
+    className="block w-full h-[350px] object-cover"
+  />
+  {/* sweeping white overlay */}
+  <span
+    className="
+      absolute inset-0
+      w-[390%] h-[200%]
+      bg-white opacity-40
+      transform rotate-45 translate-x-full -translate-y-full
+      group-hover:-translate-x-full group-hover:translate-y-full
+      transition-transform duration-2000 ease-in-out
+      pointer-events-none
+    "
+  />
+</div>
         </div>
       </div>
     </div>

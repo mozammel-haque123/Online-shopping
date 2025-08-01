@@ -1,26 +1,35 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
+import React from "react";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Mainleyaout from "../component/Mainleyaout/Mainleyaout";
-import Home from "../component/Home/Home";
-import AddReview from "../component/AddReview/AddReview";
-
+import Navbar1 from "../component/navbar1/Navbar1";
+import ProdactData1 from "../component/ProdactData1/ProdactData1";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Mainleyaout></Mainleyaout>,
-    children:[
-    {
-    path: '/',
-    element: <Home></Home>
-    },
-    {
-    path: '/AddReview',
-    element: <AddReview></AddReview>
-    },
- 
-    ]
+    element: <Mainleyaout />,
+    children: [
+      {
+        path: "/",
+        element: <Navbar1 />,
+        loader: () => fetch("/navbarbutton1.json").then(res => res.json()),
+        children: [
+          {
+            index: true,
+            element: <Navigate to="data/projector" replace />
+          },
+          {
+            path: "data/:id",
+            element: <ProdactData1 />,
+            loader: async ({ params }) => {
+              const res = await fetch("/navbar1.json");
+              const allData = await res.json();
+              return allData[params.id] || [];
+            },
+          },
+        ],
+      },
+    ],
   },
 ]);
 
