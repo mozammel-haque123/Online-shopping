@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "label": "Featured Products",
+    "items": [
+      { "id":  1, "name": "Mini 3D Glass",      "price": 220.00, "image": "https://i.ibb.co/Xfb2sJP4/01-1.png" },
+      { "id":  2, "name": "Bluetooth Gamepad",   "price": 199.00, "image": "https://i.ibb.co/nsfgPB4N/06-300x300-1-1.jpg" },
+      { "id":  3, "name": "Apple iPhone 6s",     "price": 299.00, "image": "https://i.ibb.co/GQh1s373/07-300x300-1-1.jpg" },
+      { "id":  4, "name": "Kotion Headset",      "price":  29.00, "image": "https://i.ibb.co/mCk8T8LF/21-1.png" },
+      { "id":  5, "name": "Waterproof Camera",   "price": 520.00, "image": "https://i.ibb.co/Kzsh8QDh/40-1.png" },
+      { "id":  6, "name": "Moving Camera",       "price": 230.00, "image": "https://i.ibb.co/jqLnjnG/45-1.png" },
+      { "id":  7, "name": "Core i7 Laptop",      "price": 125.00, "image": "https://i.ibb.co/fGkZ3Gpt/49-300x300-1-1.jpg" },
+      { "id":  8, "name": "Stereo Headset",      "price":  16.00, "image": "https://i.ibb.co/1fQxcZy5/Bluetooth-Headphones-Wireless-Stereo-Headset-1.jpg" },
+      { "id":  9, "name": "Golden Bluetooth",    "price":  12.00, "image": "https://i.ibb.co/1tmYdS8M/Headphones-Wireless-Stereo-Headsets-earbuds-with-Mic-1.jpg" }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "Trending Products",
+    "items": [
+      { "id": 1, "name": "Kotion Headset",    "price":  29.00, "image": "https://i.ibb.co/Kzsh8QDh/40-1.png" },
+      { "id": 2, "name": "Waterproof Camera", "price": 520.00, "image": "https://i.ibb.co/jqLnjnG/45-1.png" },
+      { "id": 3, "name": "Moving Camera",     "price": 230.00, "image": "https://i.ibb.co/mCk8T8LF/21-1.png" }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "Hot Sale",
+    "items": [
+      { "id": 1, "name": "Core i7 Laptop",   "price": 125.00, "image": "https://i.ibb.co/Kzsh8QDh/40-1.png" },
+      { "id": 2, "name": "Stereo Headset",   "price":  16.00, "image": "https://i.ibb.co/jqLnjnG/45-1.png" },
+      { "id": 3, "name": "Golden Bluetooth", "price":  12.00, "image": "https://i.ibb.co/mCk8T8LF/21-1.png" }
+    ]
+  }
+]

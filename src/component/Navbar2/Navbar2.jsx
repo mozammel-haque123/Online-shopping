@@ -52,7 +52,8 @@ export default function Navbar2() {
   return (
 
    
-    <div className="w-full mx-auto bg-gray-100 relative">
+    <div className="w-full mx-auto bg-gray-100 relative ">
+      
       {/* ==== বোতাম বার ==== */}
 
 {/* বড় ডিভাইসের জন্য */}
@@ -216,71 +217,64 @@ export default function Navbar2() {
 
 
 
-
-
-
-
-
-
-
-
-
 {/*  */}
 
         <div
-              key={item.id}
-              className="relative group  p-6 rounded-lg shadow hover:shadow-lg transition h-[600px]"
-            >
-              {/* Discount badge */}
-              <div className="absolute top-4 right-4 gol text-white px-4 py-5 rounded-full z-10 flex flex-col items-center">
-             <p className='font-bold'>{pct}</p><p className='font-semibold text-sm'>% Offer</p>
-              </div>
-              {/* Heart icon */}
-              <AiOutlineHeart className="absolute top-4 left-4 text-gray-400 hover:text-red-500 cursor-pointer z-10" />
+  key={item.id}
+  className="relative group p-6 rounded-lg shadow hover:shadow-lg transition h-[600px] overflow-hidden"
+>
+  {/* White hover overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-white opacity-0 group-hover:opacity-30 transition duration-300 ease-in-out pointer-events-none z-10 rounded-lg" />
 
-              {/* Image */}
-              <img
-                src={item.image}
-                alt={item.name}
-                className="mx-auto h-40 object-contain mb-4 z-10"
-              />
+  {/* Discount badge */}
+  <div className="absolute top-4 right-4 gol text-white px-4 py-5 rounded-full z-20 flex flex-col items-center">
+    <p className='font-bold'>{pct}</p><p className='font-semibold text-sm'>% Offer</p>
+  </div>
 
-              {/* Name */}
-              <h4 className="text-center font-semibold text-lg mb-2 z-10">
-                {item.name}
-              </h4>
+  {/* Heart icon */}
+  <AiOutlineHeart className="absolute top-4 left-4 text-gray-400 hover:text-red-500 cursor-pointer z-20" />
 
-              {/* Prices */}
-              <div className="flex justify-center items-baseline space-x-2 mb-4 z-10">
-                <span className="line-through text-gray-500">
-                  ${item.oldPrice.toFixed(2)}
-                </span>
-                <span className="text-blue-600 font-bold">
-                  ${item.price.toFixed(2)}
-                </span>
-              </div>
+  {/* Image */}
+  <img
+    src={item.image}
+    alt={item.name}
+    className="mx-auto h-40 object-contain mb-4 z-20"
+  />
 
-              {/* Sold / Available */}
-              <div className="flex justify-between text-sm mb-2 z-10">
-                <span>Already Sold: {item.sold}</span>
-                <span>Available: {item.available}</span>
-              </div>
-              <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
-                <div
-                  className="h-full bg-yellow-400 transition-width"
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
+  {/* Name */}
+  <h4 className="text-center font-semibold text-lg mb-2 z-20">
+    {item.name}
+  </h4>
 
-              {/* Countdown */}
-              <div className="text-center mb-2 z-10">
-                <span className="text-yellow-500 font-semibold">
-                  Hurry up!
-                </span>{' '}
-                Offers ends in:
-              </div>
-              <Countdown end={item.offerEnds} />
-            </div></div>
+  {/* Prices */}
+  <div className="flex justify-center items-baseline space-x-2 mb-4 z-20">
+    <span className="line-through text-gray-500">
+      ${item.oldPrice.toFixed(2)}
+    </span>
+    <span className="text-blue-600 font-bold">
+      ${item.price.toFixed(2)}
+    </span>
+  </div>
+
+  {/* Sold / Available */}
+  <div className="flex justify-between text-sm mb-2 z-20">
+    <span>Already Sold: {item.sold}</span>
+    <span>Available: {item.available}</span>
+  </div>
+  <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6 z-20">
+    <div
+      className="h-full bg-yellow-400 transition-width"
+      style={{ width: `${pct}%` }}
+    />
+  </div>
+
+  {/* Countdown */}
+  <div className="text-center mb-2 z-20">
+    <span className="text-yellow-500 font-semibold">Hurry up!</span> Offers ends in:
+  </div>
+  <Countdown end={item.offerEnds} />
+</div>
+</div>
 
         
           )
@@ -295,3 +289,78 @@ export default function Navbar2() {
 
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <div
+//               key={item.id}
+//               className="relative group  p-6 rounded-lg shadow hover:shadow-lg transition h-[600px]"
+//             >
+//               {/* Discount badge */}
+//               <div className="absolute top-4 right-4 gol text-white px-4 py-5 rounded-full z-10 flex flex-col items-center">
+//              <p className='font-bold'>{pct}</p><p className='font-semibold text-sm'>% Offer</p>
+//               </div>
+//               {/* Heart icon */}
+//               <AiOutlineHeart className="absolute top-4 left-4 text-gray-400 hover:text-red-500 cursor-pointer z-10" />
+
+//               {/* Image */}
+//               <img
+//                 src={item.image}
+//                 alt={item.name}
+//                 className="mx-auto h-40 object-contain mb-4 z-10"
+//               />
+
+//               {/* Name */}
+//               <h4 className="text-center font-semibold text-lg mb-2 z-10">
+//                 {item.name}
+//               </h4>
+
+//               {/* Prices */}
+//               <div className="flex justify-center items-baseline space-x-2 mb-4 z-10">
+//                 <span className="line-through text-gray-500">
+//                   ${item.oldPrice.toFixed(2)}
+//                 </span>
+//                 <span className="text-blue-600 font-bold">
+//                   ${item.price.toFixed(2)}
+//                 </span>
+//               </div>
+
+//               {/* Sold / Available */}
+//               <div className="flex justify-between text-sm mb-2 z-10">
+//                 <span>Already Sold: {item.sold}</span>
+//                 <span>Available: {item.available}</span>
+//               </div>
+//               <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
+//                 <div
+//                   className="h-full bg-yellow-400 transition-width"
+//                   style={{ width: `${pct}%` }}
+//                 />
+//               </div>
+
+//               {/* Countdown */}
+//               <div className="text-center mb-2 z-10">
+//                 <span className="text-yellow-500 font-semibold">
+//                   Hurry up!
+//                 </span>{' '}
+//                 Offers ends in:
+//               </div>
+//               <Countdown end={item.offerEnds} />
+//             </div>

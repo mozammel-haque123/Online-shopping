@@ -10,7 +10,7 @@ const Hover1 = () => {
   }, []);
 
   return (
-    <div className="w-full lg:w-[1000px] md:w-[500px] md:h-auto">
+    <div className="w-full lg:w-[1000px] md:w-[500px] md:h-auto bg-white">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {datas.map((d, idx) => (
           <div

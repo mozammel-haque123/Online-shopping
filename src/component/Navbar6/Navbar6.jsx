@@ -1,13 +1,13 @@
-import sani1 from '../../assets/sani1.png';
-import sani2 from '../../assets/sani2.png';
-import sani3 from '../../assets/sani3.png';
-import sani4 from '../../assets/sani4.png';
-import five from '../../assets/five.png';
-import wone1 from '../../assets/sani4.png';
-import two2 from '../../assets/sani4.png';
-import sani7 from '../../assets/sani7.png';
-import sani8 from '../../assets/sani8.png';
-import maun from '../../assets/man1.png'
+import sani1 from '../../assets/durjoi.png';
+import sani2 from '../../assets/sada.jpg';
+import sani3 from '../../assets/lal.jpg';
+import sani4 from '../../assets/bondor.jpg';
+import five from '../../assets/dijain.png';
+import wone1 from '../../assets/kallu.png';
+// import two2 from '../../assets/sani4.png';
+import sani7 from '../../assets/reality1.jpg';
+import sani8 from '../../assets/cala.png';
+import maun from '../../assets/jareja.jpg'
 
 const categories = [
   'Speaker',
@@ -32,18 +32,18 @@ const products = [
   { id: 8, name: 'Women Tops', price: '$19.00', image: sani8 },
 ];
 
-const Navbar4 = () => {
+const Navbar6 = () => {
   return (
     <div className="flex flex-col md:flex-row border border-gray-200 mb-20 md:h-[600px]">
       {/* Sidebar */}
       <div className="relative w-full md:w-1/5">
         <div
-        className="relative bg-cover md:w-[300px] h-full p-6"
+       className="relative bg-cover md:w-[300px] h-full p-6"
   style={{
     backgroundImage: `
       linear-gradient(
-        rgba(147, 121, 112, 0.8),  
-        rgba(147, 121, 112, 0.6)   
+        rgba(99, 102, 241, 0.8),  /* উপরের দিকে 80% opacity সহ indigo-500 */
+        rgba(99, 102, 241, 0.6)   /* নীচের দিকে 60% opacity সহ indigo-500 */
       ),
       url(${maun})
     `,
@@ -66,8 +66,8 @@ const Navbar4 = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-4">
+      <div className="w-full my-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-4 justify-center">
           {products.map((prod) => (
            <div
   key={prod.id}
@@ -76,7 +76,7 @@ const Navbar4 = () => {
   <img
     src={prod.image}
     alt={prod.name}
-    className="h-50 w-60 mb-2 transition duration-300 ease-in-out"
+    className="h-30 w-30 mb-2 transition duration-300 ease-in-out"
   />
 
   {/* Overlay effect */}
@@ -93,4 +93,4 @@ const Navbar4 = () => {
   );
 };
 
-export default Navbar4;
+export default Navbar6;

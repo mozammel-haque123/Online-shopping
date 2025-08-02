@@ -30,12 +30,12 @@ const OfficeSecurityTimer = useRef(null);
   };
 
   return (
- <div className="hidden md:flex items-center gap-4 md:flex-wrap">
+ <div className="hidden md:flex items-center gap-4">
       {/* Categories Sidebar Toggle */}
-      <div className="relative">
+      <div className="relative w-full max-w-[280px]">
         <button
           onClick={() => setCatOpen(!catOpen)}
-          className="flex justify-between items-center bg-yellow-400 text-white px-4 py-2 rounded-lg w-90 h-16"
+          className="flex justify-between items-center bg-yellow-400 text-white w-full rounded-lg  h-16"
         >
             <div className="flex gap-6 items-center">   
          <MdMenu className="mr-2  text-3xl" />
@@ -111,11 +111,11 @@ const OfficeSecurityTimer = useRef(null);
       </div>
 
       {/* Search Bar */}
-      <div className="flex border border-gray-300 rounded-lg ">
+      <div className="flex border border-gray-300 rounded-lg  w-full">
         <input
           type="text"
           placeholder="Find your product"
-          className="px-4 rounded-lg w-full lg:w-[500px] md:w-[300px] h-16"
+          className="px-4 rounded-lg w-full h-16"
         />
 
         {/* Category Select */}
@@ -168,7 +168,7 @@ const OfficeSecurityTimer = useRef(null);
       </div>
 
       {/* Promo Button */}
-<button className="relative overflow-hidden btn btn-outline btn-info whitespace-normal py-8 px-19 group transition-all duration-500 ease-in-out">
+<button className="relative overflow-hidden btn btn-outline btn-info whitespace-normal py-8 group transition-all duration-500 ease-in-out  w-full max-w-[280px]">
   {/* Gradient Circle Overlay from top-right */}
   <span className="absolute top-0 right-0 w-0 h-full bg-info rounded-full transition-all duration-800 ease-in-out group-hover:w-full"></span>
 
