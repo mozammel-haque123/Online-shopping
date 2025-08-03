@@ -10,14 +10,13 @@ import pre from '../../assets/removebg-preview.png';
 const Hover2 = () => (
   <div
     className="
-      bg-gray-900 text-white rounded-xl overflow-hidden
-      w-[90vw] max-w-[1250px]
+      bg-gray-900 text-white rounded-xl overflow-hidden max-w-[1250px]
       h-auto md:h-[350px]
       p-6 sm:p-8
     "
   >
     
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 relative">
       {/* Column 1 */}
       <div className="px-2">
         <h3 className="text-lg font-bold mb-2">Theme Elements</h3>
@@ -60,18 +59,26 @@ const Hover2 = () => (
       </div>
 
       {/* Column 4 */}
-      <div className="px-2 flex flex-col relative">
-        <h3 className="text-lg font-bold mb-2">Feature Spotlight</h3>
-        <p className="text-sm mb-4 text-gray-400 leading-relaxed">
-          The Apple Watch’s speaker & mic let you call friends from your wrist—
-          splash-resistant keeps you connected everywhere.
-        </p>
-        <img
-          src={pre}
-          alt="Feature Preview"
-          className="w-full h-auto mt-auto rounded-lg shadow-lg absolute top-45 left-8"
-        />
-      </div>
+ <div className="px-2 flex flex-col md:flex-row">
+  {/* Text Block */}
+  <div className="md:w-1/2">
+    <h3 className="text-lg font-bold mb-2">Feature Spotlight</h3>
+    <p className="text-sm mb-4 text-gray-400 leading-relaxed max-w-xs md:max-w-md">
+      The Apple Watch’s speaker & mic let you call friends from your wrist—  
+      splash-resistant keeps you connected everywhere.
+    </p>
+  </div>
+
+  {/* Image Block */}
+<div className="absolute -bottom-6 -right-6 md:top-40 md:-right-8">
+  <img
+    src={pre}
+    alt="Feature Preview"
+    className="h-40 md:w-auto"
+  />
+</div>
+</div>
+
     </div>
   </div>
 );

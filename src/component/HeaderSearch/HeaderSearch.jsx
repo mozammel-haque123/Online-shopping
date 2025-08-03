@@ -35,21 +35,21 @@ const OfficeSecurityTimer = useRef(null);
       <div className="relative w-full max-w-[280px]">
         <button
           onClick={() => setCatOpen(!catOpen)}
-          className="flex justify-between items-center bg-yellow-400 text-white w-full rounded-lg  h-16"
+          className="flex justify-between items-center px-2 bg-yellow-400 text-white w-full rounded-lg  h-16"
         >
             <div className="flex gap-6 items-center">   
          <MdMenu className="mr-2  text-3xl" />
           All Categories</div>
       
-          <MdKeyboardArrowUp  className={`ml-2 transform text-4xl  ${catOpen ? "rotate-180" : ""}`} />
+          <MdKeyboardArrowUp  className={`ml-2 transform text-4xl ${catOpen ? "rotate-180" : ""}`} />
         </button>
         {catOpen && (
-          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg 30 w-90 z-15">
+          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg 30 w-full z-15">
        <li className="flex justify-between items-center px-6"  
        onMouseEnter={() => handleEnter(electronicsTimer, setElectronics)}
        onMouseLeave={() => handleLeave(electronicsTimer, setElectronics)} > <span className={`${electronics && 'text-blue-600'}`}>Electronics</span> <RiArrowDropUpLine className={`text-6xl ${electronics ? 'text-blue-600 rotate-80 transform transition-transform duration-1000 ease-in-out' : '-rotate-0 transform transition-transform duration-1000 ease-in-out'}`}/>
        {electronics && (
-         <div className="absolute top-1 left-90 mt-2">
+         <div className="absolute top-1 left-70 mt-2">
        <MegaMenu1></MegaMenu1>
     </div>
        ) 
@@ -61,7 +61,7 @@ const OfficeSecurityTimer = useRef(null);
        onMouseEnter={() => handleEnter(MensFashionTimer, setMensFashion)}
        onMouseLeave={() => handleLeave(MensFashionTimer, setMensFashion)} > <span className={`${MensFashion && 'text-blue-600'}`}>Men’s Fashion</span> <RiArrowDropUpLine className={`text-6xl ${MensFashion ? 'text-blue-600 rotate-80 transform transition-transform duration-1000 ease-in-out' : '-rotate-0 transform transition-transform duration-1000 ease-in-out'}`}/>
        {MensFashion && (
-         <div className="absolute top-15 left-90">
+         <div className="absolute top-15 left-70">
       <MegaMenu2 />
     </div>
        ) 
@@ -74,7 +74,7 @@ const OfficeSecurityTimer = useRef(null);
        onMouseEnter={() => handleEnter(WomensFashionTimer, setWomensFashion)}
        onMouseLeave={() => handleLeave(WomensFashionTimer, setWomensFashion)} > <span className={`${WomensFashion && 'text-blue-600'}`}>Women’s Fashion</span> <RiArrowDropUpLine className={`text-6xl ${WomensFashion ? 'text-blue-600 rotate-80 transform transition-transform duration-1000 ease-in-out' : '-rotate-0 transform transition-transform duration-1000 ease-in-out'}`}/>
        {WomensFashion && (
-         <div className="absolute top-29 left-90 mt-2">
+         <div className="absolute top-29 left-70 mt-2">
       <MegaMenu3 />
     </div>
        ) 
@@ -87,7 +87,7 @@ const OfficeSecurityTimer = useRef(null);
        onMouseEnter={() => handleEnter(OfficeSecurityTimer, setOfficeSecurity)}
        onMouseLeave={() => handleLeave(OfficeSecurityTimer, setOfficeSecurity)}><span className={`${OfficeSecurity && 'text-blue-600'}`}>Office & Security </span> <RiArrowDropUpLine className={`text-6xl ${OfficeSecurity ? 'text-blue-600 rotate-80 transform transition-transform duration-1000 ease-in-out' : '-rotate-0 transform transition-transform duration-1000 ease-in-out'}`}/>
        {OfficeSecurity && (
-         <div className="absolute top-44 left-90 mt-2">
+         <div className="absolute top-44 left-70 mt-2">
           <MegaMenu4/>
     </div>
        ) 
@@ -128,7 +128,7 @@ const OfficeSecurityTimer = useRef(null);
             <MdKeyboardArrowDown className="ml-2 text-3xl" />
           </button>
           {selOpen && (
-            <ul className="absolute right-0 mt-2 shadow-lg rounded-lg w-48 z-15 bg-blue-600 text-white font-bold">
+            <ul className="absolute right-0 mt-2 shadow-lg rounded-lg w-full z-15 bg-blue-600 text-white font-bold">
             <li className="hover:bg-amber-400 px-2">All Categories</li>
             <li className="hover:bg-amber-400 px-2">Portable</li>
             <li className="hover:bg-amber-400 px-2">Watch</li>
@@ -168,7 +168,8 @@ const OfficeSecurityTimer = useRef(null);
       </div>
 
       {/* Promo Button */}
-<button className="relative overflow-hidden btn btn-outline btn-info whitespace-normal py-8 group transition-all duration-500 ease-in-out  w-full max-w-[280px]">
+      <div className="w-full max-w-[280px]">
+      <button className="relative overflow-hidden btn btn-outline btn-info whitespace-normal py-8 group transition-all duration-500 ease-in-out w-full ">
   {/* Gradient Circle Overlay from top-right */}
   <span className="absolute top-0 right-0 w-0 h-full bg-info rounded-full transition-all duration-800 ease-in-out group-hover:w-full"></span>
 
@@ -180,7 +181,9 @@ const OfficeSecurityTimer = useRef(null);
   <span className="relative z-10 text-sm text-info group-hover:text-white">
     Get 45% Off!
   </span>
-</button>
+</button>  
+      </div>
+
 
 
 

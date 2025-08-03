@@ -1,12 +1,12 @@
-// src/components/Navbar2.jsx
+
 import React, { useState, useEffect } from 'react'
-import tabData from '../data/../../../public/nav2data.json'        // <-- JSON ফাইল সঠিক path
+import tabData from '../data/../../../public/nav2data.json'        
 import { AiOutlineHeart } from 'react-icons/ai'
 import watch from '../../assets/download.jpeg'
 import toplep from '../../assets/download1.jpeg'
 import hot from '../../assets/screenshot.png'
 
-// Countdown component
+
 function Countdown({ end }) {
   const calc = () => {
     const diff = Math.max(0, new Date(end) - new Date())

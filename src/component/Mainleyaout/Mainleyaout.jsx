@@ -12,6 +12,8 @@ import Navbar6 from "../Navbar6/Navbar6";
 import Navbar7 from "../Navbar7/Navbar7";
 import Bigcard from "../Bigcard/Bigcard";
 import Smallcard from "../Smallcard/Smallcard";
+import BlackSection from "../BlackSection/BlackSection";
+import Footer from "../Footer/Footer";
 
 
 const Mainleyaout = () => {
@@ -35,6 +37,8 @@ const Mainleyaout = () => {
         <Bigcard></Bigcard>
         <Smallcard></Smallcard>
         </div>    
+        <BlackSection></BlackSection>
+        <Footer></Footer>
         </div>
 
     );

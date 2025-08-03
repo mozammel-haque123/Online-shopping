@@ -51,35 +51,52 @@ export default function Smallcard() {
         {/* প্রোডাক্ট কার্ড গ্রুপ (৩ কলাম) */}
     <div class="grid grid-cols-1  md:grid-rows-3 md:grid-flow-col md:auto-cols-fr gap-x-30">
           {tabData[activeTab].items.map(item => (
-            <div
-              key={item.id}
-              className="flex items-center space-x-4 bg-white  transition"
-            >
-              {/* ইমেজ */}
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-28 h-18 object-contain"
-              />
-              {/* নাম ও প্রাইস */}
-              <div>
-                <h4 className="text-gray-800 font-semibold">{item.name}</h4>
-                <p className="text-blue-600 font-bold">
-                  ${item.price.toFixed(2)}
-                </p>
-              </div>
-            </div>
+  <div
+  key={item.id}
+  className="relative flex items-center space-x-4 bg-white group overflow-hidden transition"
+>
+  {/* ইমেজ */}
+  <img
+    src={item.image}
+    alt={item.name}
+    className="w-28 h-18 object-contain"
+  />
+
+  {/* Overlay effect */}
+  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-35 transition duration-300 ease-in-out pointer-events-none" />
+
+  {/* নাম ও প্রাইস */}
+  <div>
+    <h4 className="text-gray-800 font-semibold">{item.name}</h4>
+    <p className="text-blue-600 font-bold">
+      ${item.price.toFixed(2)}
+    </p>
+  </div>
+</div>
+
           ))}
         </div>
 
         {/* প্রোমো কার্ড (ডান পাশে) */}
-        <div className="bg-white p-6 rounded-lg">
-          <img
-            src={cardsmulti}
-            alt="Promo"
-            className="w-[300px] h- object-cover rounded"
-          />
-        </div>
+ <div className="relative group overflow-hidden bg-white p-6 rounded-lg">
+  <img
+    src={cardsmulti}
+    alt="Promo"
+    className="w-[300px] h-auto object-cover rounded"
+  />
+  <span
+    className="
+      absolute inset-0
+      w-[400%] h-[200%]
+      bg-white opacity-40
+      transform rotate-45 translate-x-full -translate-y-full
+      group-hover:-translate-x-full group-hover:translate-y-full
+      transition-transform duration-[2000ms] ease-in-out
+      pointer-events-none
+    "
+  />
+</div>
+
       </div>
     </div>
   )

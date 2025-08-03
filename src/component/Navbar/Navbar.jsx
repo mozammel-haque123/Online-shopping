@@ -8,6 +8,7 @@ import Hover1 from '../Hover1/Hover1';
 import Hover2 from '../Hover2/Hover2';
 import news from '../../assets/removebg.png';
 import hot from '../../assets/hotyellow.png'
+import { FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
                 Home <RiArrowDropDownLine className="ml-1 text-2xl" />
               </NavLink>
               {openHome && (
-                <div className="absolute top-9 left-0 right-0 flex justify-center border rounded shadow-lg z-20">
+                <div className="absolute top-9 left-0 right-0 flex justify-center mt-2 rounded shadow-lg z-20">
                   <Hover1 />
                 </div>
               )}
@@ -150,7 +151,7 @@ const Navbar = () => {
                 Gallery <RiArrowDropDownLine className="ml-1 text-2xl" />
               </NavLink>
               {openGallery && (
-                <div className="absolute top-full mt-0 right-0 left-0 flex justify-center md:transform-none  lg:right-0 p-4 rounded shadow-lg z-20">
+                <div className="absolute mt-2 right-0 left-0 flex justify-center md:transform-none  lg:right-0 rounded z-20">
                   <Hover2 />
                 </div>
               )}
@@ -201,7 +202,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileOpen && (
 <div
-  className={`fixed top-0 left-0 h-full w-96 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out
+  className={`fixed md:hidden block top-0 left-0 h-full w-96 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out overflow-y-scroll 
     ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
   `}
 >
@@ -210,8 +211,8 @@ const Navbar = () => {
     <div className="flex items-center">
             <img src={navlogo} alt="Logo" className="h-8 w-40" />
           </div>
-    <button onClick={() => setMobileOpen(false)} className="text-xl font-bold">
-      ✕
+    <button onClick={() => setMobileOpen(false)} className="text-xl">
+    <FaTimes size={24} />
     </button>
   </div>
 
